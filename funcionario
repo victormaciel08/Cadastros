@@ -14,14 +14,14 @@
 
 int main(void) {
 	
-	printf("Deseja Cadastrar Quantas Pessoas? ");
+	printf("Deseja Cadastrar Quantos Funcionarios? ");
 	scanf("%d", &op);
 	
 	system("cls");
 	
 	struct Cadastro func[op];
 	
-	printf("-----------Cadastro De Pessoas-----------");
+	printf("-----------Cadastro De Funcionarios-----------");
 	
 	for(i = 1; i <= op; i++){
 		
