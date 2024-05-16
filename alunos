@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define X 80
+#define A 100
+
+	struct Cadastro{
+		char nome[X];
+		int idade;
+		int matricula;
+		float media;
+	};
+	int op = 0;
+	int i;
+	
+
+int main(void) {
+	
+	struct Cadastro aluno[A];
+	
+	
+	printf("Deseja Cadastrar Quantos Alunos? ");
+	scanf("%d", &op);
+	
+	for(i = 1; i <= op; i++){
+	
+	printf("\n---------Cadastro De Alunos---------\n\n");
+		
+	printf("Digite O Primeiro Nome Do Aluno %d: ", i);
+	scanf("%s", &aluno[i].nome);
+	fflush(stdin);
+	
+	printf("Digite Sua Idade: ");
+	scanf("%d", &aluno[i].idade);
+	fflush(stdin);
+	
+	printf("Digite Sua Matricula: ");
+	scanf("%d", &aluno[i].matricula);
+	fflush(stdin);
+	
+	printf("Digite Sua Media: ");
+	scanf("%f", &aluno[i].media);
+	fflush(stdin);
+	
+	}
+	
+	
+	for(i = 1; i <= op; i++){
+	printf("\nNome (Aluno %d): %s\nIdade (Aluno %d): %d\nMatricula (Aluno %d): %d\nMedia (Aluno %d): %.2f\n", i, aluno[i].nome, i, aluno[i].idade, i, aluno[i].matricula, i, aluno[i].media);
+	}
+	
+	
+	
+	
+	
+	
+	return 0;
+}
