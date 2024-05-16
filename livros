@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define X 80
+
+	struct Cadastro{
+		char titulo[X];
+		int ano;
+		char autor[X];
+	};
+	int op = 0;
+	int i;
+	
+
+int main(void) {
+	
+	printf("Deseja Cadastrar Quantos Livros? ");
+	scanf("%d", &op);
+	
+	system("cls");
+	
+	struct Cadastro livro[op];
+	
+	printf("-----------Cadastro De Livros-----------");
+	
+	for(i = 1; i <= op; i++){
+		
+	printf("\n\nDigite O Titulo Do Livro: ");
+	scanf(" %80[^\n]", &livro[i].titulo);
+	fflush(stdin);
+	
+	printf("Digite Seu Ano De Lancamento: ");
+	scanf("%d", &livro[i].ano);
+	fflush(stdin);
+	
+	printf("Digite Seu Autor: ");
+	scanf(" %80[^\n]", &livro[i].autor);
+	fflush(stdin);
+	
+	}
+	
+	system("cls");
+	
+	for(i = 1; i <= op; i++){
+	printf("\n-------------------------------");
+	printf("\nTitulo: %s\nAno De Lancamento: %d\nAutor: %s", livro[i].titulo, livro[i].ano, livro[i].autor);
+	}
+	
+	return 0;
+}
