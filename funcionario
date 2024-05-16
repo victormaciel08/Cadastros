@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define X 80
+
+	struct Cadastro{
+		char nome[X];
+		float sal;
+		char cargo[X];
+	};
+	int op = 0;
+	int i;
+	
+
+int main(void) {
+	
+	printf("Deseja Cadastrar Quantas Pessoas? ");
+	scanf("%d", &op);
+	
+	system("cls");
+	
+	struct Cadastro func[op];
+	
+	printf("-----------Cadastro De Pessoas-----------");
+	
+	for(i = 1; i <= op; i++){
+		
+	printf("\n\nDigite O Nome: ");
+	scanf(" %80[^\n]", &func[i].nome);
+	fflush(stdin);
+	
+	printf("Digite Seu Salario: ");
+	scanf("%f", &func[i].sal);
+	fflush(stdin);
+	
+	printf("Digite Seu Cargo: ");
+	scanf(" %80[^\n]", &func[i].cargo);
+	fflush(stdin);
+	
+	}
+	
+	system("cls");
+	
+	for(i = 1; i <= op; i++){
+	printf("\n-------------------------------");
+	printf("\nNome: %s\nSalario: %.2f\nCargo: %s", func[i].nome, func[i].sal, func[i].cargo);
+	}
+	
+	return 0;
+}
