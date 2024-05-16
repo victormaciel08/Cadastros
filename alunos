@@ -28,7 +28,7 @@ int main(void) {
 	
 	printf("-----------Cadastro De Alunos-----------\n\n");
 		
-	printf("Digite Nome Do Aluno %d: ", i);
+	printf("Digite Nome Do Aluno: ");
 	scanf(" %80[^\n]", &aluno[i].nome);
 	fflush(stdin);
 	
