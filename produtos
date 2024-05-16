@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define X 100
+
+
+	struct Cadastro{
+		char nome[X];
+		int quant;
+		float preco;
+	};
+	int op = 0;
+	int i;
+	
+
+int main(void) {
+	
+	printf("-----------Supermercado Do Zezin-----------\n\n");
+	printf("Deseja Cadastrar Quantos Produtos? ");
+	scanf("%d", &op);
+	system("cls");
+	
+	struct Cadastro prod[op];
+	
+	printf("-----------Supermercado Do Zezin-----------\n\n");
+	
+	for(i = 1; i <= op; i++){
+	
+	printf("-----------Cadastro De Produtos-----------\n\n");
+		
+	printf("Digite Nome Do Produto %d: ", i);
+	scanf(" %100[^\n]", &prod[i].nome);
+	fflush(stdin);
+	
+	printf("Digite Seu Preco: ");
+	scanf("%f", &prod[i].preco);
+	fflush(stdin);
+	
+	printf("Digite Sua Quantidade Em Estoque: ");
+	scanf("%d", &prod[i].quant);
+	fflush(stdin);
+
+	}
+	
+	system("cls");
+	
+	printf("-----------Supermercado Do Zezin-----------");
+	
+	for(i = 1; i <= op; i++){
+	printf("\n-------------------------------");
+	printf("\nProduto: %s\nPreco: %.2f\nEm Estoque: %d", prod[i].nome, prod[i].preco, prod[i].quant);
+
+	}
+	
+	return 0;
+}
