@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #define X 80
-#define A 100
 
 	struct Cadastro{
 		char nome[X];
@@ -16,18 +15,21 @@
 
 int main(void) {
 	
-	struct Cadastro aluno[A];
-	
+	printf("-----------Escolinha Do Zezin-----------\n\n");
 	
 	printf("Deseja Cadastrar Quantos Alunos? ");
 	scanf("%d", &op);
 	
+	system("cls");
+	
+	struct Cadastro aluno[op];
+	
 	for(i = 1; i <= op; i++){
 	
-	printf("\n---------Cadastro De Alunos---------\n\n");
+	printf("-----------Cadastro De Alunos-----------\n\n");
 		
-	printf("Digite O Primeiro Nome Do Aluno %d: ", i);
-	scanf("%80[^\n]", &aluno[i].nome);
+	printf("Digite Nome Do Aluno %d: ", i);
+	scanf(" %80[^\n]", &aluno[i].nome);
 	fflush(stdin);
 	
 	printf("Digite Sua Idade: ");
@@ -44,9 +46,13 @@ int main(void) {
 	
 	}
 	
+	system("cls");
+	
+	printf("-----------Escolinha Do Zezin-----------");
 	
 	for(i = 1; i <= op; i++){
-	printf("\nNome (Aluno %d): %s\nIdade (Aluno %d): %d\nMatricula (Aluno %d): %d\nMedia (Aluno %d): %.2f\n", i, aluno[i].nome, i, aluno[i].idade, i, aluno[i].matricula, i, aluno[i].media);
+	printf("\n-------------------------------");
+	printf("\nNome: %s\nIdade: %d\nMatricula: %d\nMedia: %.2f\n", aluno[i].nome, aluno[i].idade, aluno[i].matricula, aluno[i].media);
 	}
 	
 	
