@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define X 80
+
+	struct Cadastro{
+		char nome[X];
+		int idade;
+		char cidade[X];
+	};
+	int op = 0;
+	int i;
+	
+
+int main(void) {
+	
+	printf("Deseja Cadastrar Quantas Pessoas? ");
+	scanf("%d", &op);
+	
+	system("cls");
+	
+	struct Cadastro pessoas[op];
+	
+	printf("-----------Cadastro De Pessoas-----------");
+	
+	for(i = 1; i <= op; i++){
+		
+	printf("\n\nDigite O Nome: ");
+	scanf(" %80[^\n]", &pessoas[i].nome);
+	fflush(stdin);
+	
+	printf("Digite Sua Idade: ");
+	scanf("%d", &pessoas[i].idade);
+	fflush(stdin);
+	
+	printf("Digite Sua Cidade: ");
+	scanf(" %80[^\n]", &pessoas[i].cidade);
+	fflush(stdin);
+	
+	}
+	
+	system("cls");
+	
+	for(i = 1; i <= op; i++){
+	printf("\n-------------------------------");
+	printf("\nNome: %s\nIdade: %d\nCidade: %s", pessoas[i].nome, pessoas[i].idade, pessoas[i].cidade);
+	}
+	
+	
+	
+	
+	
+	
+	return 0;
+}
