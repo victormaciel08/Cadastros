@@ -29,7 +29,7 @@ int main(void) {
 	printf("-----------Cadastro De Produtos-----------\n\n");
 		
 	printf("Digite Nome Do Produto %d: ", i);
-	scanf(" %100[^\n]", &prod[i].nome);
+	scanf(" %100[^\n]", prod[i].nome);
 	fflush(stdin);
 	
 	printf("Digite Seu Preco: ");
